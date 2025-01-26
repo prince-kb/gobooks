@@ -2,7 +2,8 @@ import BookList from "@/components/ui/BookList";
 import BookOverview from "@/components/ui/BookOverview";
 import { sampleBooks } from "../constants";
 
-export default function Home() {
+const Home=async()=> {
+
   return (
     <>
     <BookOverview {...sampleBooks[0]}/>
@@ -10,3 +11,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home
