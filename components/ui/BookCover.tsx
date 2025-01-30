@@ -1,7 +1,9 @@
+"use client"
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React from "react";
 import BookCoverSvg from "./BookCoverSvg";
+import { IKImage } from "imagekitio-next";
+import config from "@/lib/config";
 
 interface Props {
   className?: string;
@@ -23,7 +25,7 @@ const BookCover = ({ className, variant="regular", coverColor="#012B48", coverIm
   return <div className={cn('relative transition-all duration-300',variantStyles[variant],className)}>
     <BookCoverSvg coverColor={coverColor}/>
     <div className="absolute z-10" style={{left : "12%",width : "87.5%", height:"88%"}}>
-      <Image src={coverImage} alt="Cover" fill className="rounded-sm object-fill" />
+      <IKImage path={coverImage} urlEndpoint={ config.env.imagekit.urlEndpoint} alt="Cover" fill className="rounded-sm object-fill" loading="lazy" lqip={{active : true}} />
     </div>
   </div>;
 };

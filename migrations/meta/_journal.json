@@ -8,6 +8,13 @@
       "when": 1737803385044,
       "tag": "0000_material_harrier",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1738232689698,
+      "tag": "0001_chief_hammerhead",
+      "breakpoints": true
     }
   ]
 }
