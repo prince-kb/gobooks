@@ -39,7 +39,7 @@ const seed = async () => {
 
   try {
     for (const book of dummyBooks) {
-        // console.log(book)
+        console.log(book.title)
       const coverUrl = (await uploadToImageKit(
         book.coverUrl,
         `${book.title}.jpg`,
